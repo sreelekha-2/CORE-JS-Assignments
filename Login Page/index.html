@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <form action="result.html" onsubmit="return validation()">
+        <label for="mail">Email : </label>
+        <input type="email" id="mail" onblur="emailValidation()"><br>
+        <span id="err1"></span><br>
+        <label for="pass">Password : </label>
+        <input type="password" id="pass" onblur="passValidation()"><br>
+        <span id="err2"></span><br>
+        <input type="checkbox" id="cbox" onchange="remember()">
+        <label for="cbox">Remember me</label><br>
+        <input type="submit" id="subBtn" value="Login" onclick="showDetails()"><br>
+        <span id="err3"></span><br>
+
+       
+    </form>
+
+    <script src="login.js"></script>
+</body>
+</html>

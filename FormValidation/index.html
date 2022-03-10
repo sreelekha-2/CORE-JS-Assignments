@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="result.html" onsubmit="return validateForm()">
+        <label for="fullname">Enter Your Name : </label>
+        <input type="text" id="fullname" onblur="validate1()">
+        <p id="errMsg1"></p>
+        <label for="pass">Enter Passowrd : </label>
+        <input type="password" id="pass" onblur="validate2()"> 
+        <p id="errMsg2"></p>
+        <input type="checkbox" id="box" onchange="show()">Show Password<br>
+        <label for="mail">Enter Your Mail : </label>
+        <input type="email" id="mail" onblur="validate3()">
+        <p id="errMsg3"></p>
+        <label>Enter Mobile No : </label>
+        <input type="text" id="mobile" onblur="validate4()">
+        <p id="errMsg4"></p>
+        <label>Gender : </label>
+        <input type="radio" name="gender" id="r1" value="male">
+        <label for="r1">Male</label>
+        <input type="radio" name="gender" id="r2" value="female">
+        <label for="r2">Female</label>
+        <p id="errMsg5"></p>
+        <p></p>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <script src="formValidation.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cal-container d-flex flex-row justify-content-start align-items-start" id="calContainer">
+        <div class="calculator d-flex flex-column align-items-center justify-content-center">
+            <div class="result d-flex flex-column align-items-end" id="result">
+                <p class="input" id="prev"></p>
+                <p class="output" id="current"></p>
+            </div>
+    
+            <div class="calculator-keys">
+                <input type="button" value="C" class="key clear-btn" id="clearBtn">
+                <input type="button" value="x" class="key" onclick="undo()">
+                <input type="button" value="^" operator class="key operator" id="exponent">
+                <input type="button" value="+" operator class="key operator" id="plus">
+    
+                <input type="button" value="1" number class="key" id="num1">
+                <input type="button" value="2" number class="key number" id="num2">
+                <input type="button" value="3" number class="key number" id="num3">
+                <input type="button" value="-" operator class="key operator" id="minus">
+                <input type="button" value="4" number class="key number" id="num4">
+    
+                <input type="button" value="5" number class="key number" id="num5">
+                <input type="button" value="6" number class="key number" id="num6">
+                <input type="button" value="*" operator class="key operator" id="multiply">
+                <input type="button" value="7" number class="key number" id="num7">
+                <input type="button" value="8" number class="key number" id="num8">
+                <input type="button" value="9" number class="key number" id="num9">
+                <input type="button" value="÷" operator class="key operator" id="divide">
+            
+                <input type="button" value="." number class="key">
+                <input type="button" value="0" number class="key number zero-btn" id="num0">
+                <input type="button" value="=" class="key operator" id="equals">
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+</body>
+<script src="calc.js"></script>
+</html>

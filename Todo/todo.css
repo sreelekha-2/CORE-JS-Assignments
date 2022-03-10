@@ -1,0 +1,22 @@
+.label-container{
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+}
+.update-btn{
+    display:none;
+}
+.update-btn2{
+    display:inline;
+}
+.add-btn2{
+    display:none;
+}
+.button-container{
+    width:20%;
+    display:flex;
+    justify-content: space-between;
+}
+.list-item{
+    padding:10px;
+}
