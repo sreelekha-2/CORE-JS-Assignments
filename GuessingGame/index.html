@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        .play-btn{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Play the guessing number game</h2>
+    <label for="num">Enter Number between 1 to 100</label><br><br>
+    <input type="number" id="num"><br><br>
+    <input type="submit" onclick="showMsg()">
+    <p id="errMsg"></p>
+    <button id="playBtn" class="play-btn">Play Again</button>
+</body>
+<script src="index.js"></script>
+</html>

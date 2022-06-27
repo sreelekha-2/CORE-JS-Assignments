@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .clover-img{
+            width:100px;
+            height:100px;
+        }
+    </style> -->
+</head>
+<body>
+    <section>
+
+        <img src="images/clover.png" width="100" alt="clover" class="clover-img" id="cloverImg">
+
+        <div>
+            <button id="minus" onclick="zoomout()">-</button>
+            <button id="plus" onclick="zoomin()">+</button>
+        </div>
+        
+    </section>
+
+    <script>
+        function zoomin(){
+            let ele=document.getElementById("cloverImg");
+            ele.width=ele.width+5;
+        }
+
+        function zoomout(){
+            let ele=document.getElementById("cloverImg");
+            ele.width=ele.width-5;
+        }
+    </script>
+</body>
+</html>

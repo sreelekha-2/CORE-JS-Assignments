@@ -1,0 +1,12 @@
+.fruits-container{
+    display:flex;
+    flex-wrap:wrap;
+}
+.main-img{
+    width:300px;
+    height:400px;
+}
+.fruits-container .fruit-img{
+    margin:15px;
+    width:150px;
+}
