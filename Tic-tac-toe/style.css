@@ -1,0 +1,33 @@
+.grid{
+
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+   
+    
+
+}
+.grid-item{
+   
+   width: 70px;
+   height: 70px;
+   border: 1px solid #333333;
+   cursor: pointer;
+   font-size: 50px;
+   text-align:center;
+}
+.resetBtn{
+    padding:10px 35px;
+    font-size:18px;
+    color:#FFFFFF;
+    background-color:orange;
+    margin:10px 0;
+    border-width:0px;
+    cursor:pointer;
+}
+.result{
+    font-size:25px;
+
+}
+.color{
+    color:green;
+}

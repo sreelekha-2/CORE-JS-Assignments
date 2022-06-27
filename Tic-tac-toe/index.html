@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE </title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <section>
+       
+        <h3 id="player1">Player 1 turn</h3>
+        <h3 id="player2">Player 2 turn</h3>
+        <button onclick="restart()" class="resetBtn">Restart</button>
+       
+        <div class="grid" id="grid">
+            <div  class="grid-item" id="grid-one">
+
+            </div>
+            <div class="grid-item" id="grid-two">
+
+            </div>
+            <div class="grid-item" id="grid-three">
+
+            </div>
+            <div class="grid-item" id="grid-four">
+
+            </div>
+            <div class="grid-item" id="grid-five">
+
+            </div>
+            <div class="grid-item" id="grid-six">
+
+            </div>
+            <div class="grid-item" id="grid-seven">
+
+            </div>
+            <div class="grid-item" id="grid-eight">
+
+            </div>
+            <div class="grid-item" id="grid-nine">
+
+            </div>
+        </div>
+
+
+        <div id="result" class="result">
+
+        </div>
+    </section>
+    <script src="index.js"></script>
+    <!-- <script>
+       
+        let player1=document.getElementById("player1");
+        let player2=document.getElementById("player2");
+        let result = document.getElementById("result")
+        let turn = "player1";
+        let gameOver=false;
+        if(turn==="player1"){
+            player1.classList.add("color");
+            
+        }
+
+        winningCombinations = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+
+
+        function showSymbol(id) {
+
+            if (turn === "player1") {
+                document.getElementById(id).innerHTML = "X";
+                turn = "player2";
+                player1.classList.remove("color");
+                player2.classList.add("color")
+            } else {
+                document.getElementById(id).innerHTML = "O";
+                turn = "player1";
+                player2.classList.remove("color");
+                player1.classList.add("color")
+            }
+           
+            checkTie();
+            if(gameOver===false){
+                console.log(gameOver)
+                checkWinner();
+            }
+            
+        }
+
+
+        let grids = document.getElementsByClassName("grid-item");
+        function restart(){
+            for(let grid of grids){
+                grid.innerHTML="";
+                result.textContent="";
+                turn="player1";
+                player2.classList.remove("color");
+                player1.classList.add("color")
+                c=0;
+                gameOver=false
+            }
+        }
+
+        for (let grid of grids) {
+            
+            grid.onclick = function () {
+                if(!gameOver){
+                    showSymbol(grid.id)
+                }
+                
+            }
+        }
+
+
+        function checkWinner() {
+           
+
+            one = document.getElementById("grid-one").innerHTML;
+            two = document.getElementById("grid-two").innerHTML;
+            three = document.getElementById("grid-three").innerHTML;
+            four = document.getElementById("grid-four").innerHTML;
+            five = document.getElementById("grid-five").innerHTML;
+            six = document.getElementById("grid-six").innerHTML;
+            seven = document.getElementById("grid-seven").innerHTML;
+            eight = document.getElementById("grid-eight").innerHTML;
+            nine = document.getElementById("grid-nine").innerHTML;
+          
+            // if (one === "" || two === "" || three === "") {
+            //     console.log("empty")
+              
+            // } 
+           
+             if (one === "X" && two === "X" && three == "X" || (one === "O" && two === "O" && three == "O")) {
+
+                if (turn === "player2") {
+                    winner = "X"
+                    result.textContent = "X won";
+                    gameOver=true
+                    console.log(gameOver)
+                    // for(let grid of grids){
+                    //     grid.setAttribute("disabled",true);
+                    //     console.log(grid)
+                    // }
+
+                } else {
+                    winner = "O"
+                    result.textContent = "O won";
+                    gameOver=true
+
+                }
+
+            } else if ((four === "X" && five === "X" && six === "X") || (four === "O" && five === "O" && six === "O")) {
+                if (turn === "player2") {
+                    winner = "X"
+                    result.textContent = "X won";
+                    gameOver=true
+
+                } else {
+                    winner = "O"
+                    result.textContent = "O won";
+                    gameOver=true
+                }
+
+            } else if ((seven === "X" && eight === "X" && nine === "X") || (seven === "O" && eight === "O" && nine ===
+                    "O")) {
+                if (turn === "player2") {
+                    winner = "X"
+                    result.textContent = "X won"
+                    gameOver=true
+                } else {
+                    winner = "O"
+                    result.textContent = "O won";
+                    gameOver=true
+                }
+            } else if ((one === "X" && four === "X" && seven === "X") || (one === "O" && four === "O" && seven === "O")) {
+                if (turn === "player2") {
+                    winner = "X"
+                    result.textContent = "X won"
+                } else {
+                    winner = "O"
+                    result.textContent = "O won"
+                }
+            } else if( (two === "X" && five === "X" && eight === "X") || (two === "O" && five === "O" && eight === "O")) {
+                if (turn === "player2") {
+                    winner = "X"
+                    result.textContent = "X won"
+                } else {
+                    winner = "O"
+                    result.textContent = "O won"
+                }
+            } else if ((three === "X" && six === "X" && nine === "X" )|| (three === "O" && six === "O" && nine === "O")) {
+                if (turn === "player2") {
+                    winner = "X"
+                    result.textContent = "X won"
+                    gameOver=true
+                } else {
+                    winner = "O"
+                    result.textContent = "O won"
+                    gameOver=true
+                }
+            } else if ((one === "X" && five === "X" && nine === "X") || (one === "O" && five === "O" && nine === "O")) {
+                if (turn === "player2") {
+                    winner = "X"
+                    result.textContent = "X won"
+                    gameOver=true
+                } else {
+                    winner = "O"
+                    result.textContent = "O won"
+                    gameOver=true
+                }
+            } else if ((three === "X" && five === "X" && seven === "X") || (three === "O" && five === "O" && seven ===
+                    "O")) {
+                if (turn === "player2") {
+                    winner = "X"
+                    result.textContent = "X won"
+                    gameOver=true
+                } else {
+                    winner = "O"
+                    result.textContent = "O won"
+                    gameOver=true
+                }
+            }
+
+
+
+
+
+        }
+        c=0;
+        function checkTie(){
+            let gridItems=document.querySelectorAll(".grid");
+           for(let item of gridItems){
+               if(item.innerHTML!==""){
+                   c=c+1;
+               }
+           }
+          
+            if (c==9 && this.winner !== "O" && !this.winner !== "X") {
+            console.log("tie");
+            console.log(c)
+            // winner="";
+            result.textContent="It is tie"
+        }
+        }
+       
+
+
+        // grids.forEach((grid,id)=>{
+        //    return grid.getElementById(id).addEventListener("click",showSymbol(id))
+        // })
+        // document.getElementById("grid-one").addEventListener("click",showSymbol)
+    </script> -->
+
+
+</body>
+
+</html>
