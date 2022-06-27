@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    
+    <section class="image-slider">
+        <h1>Image Slider</h1>
+        <img src="images/apple.png" alt="apple" class="fruit-image" id="fruitImage">
+        <p id="num" class="number">0</p>
+        <div>
+            <button onclick="prevBtn()" class="btn prev" id="prevButton"><i class="fa-solid fa-chevron-left icon"></i></button>
+            <button onclick="nextBtn()" class="btn next" id="nextButton"><i class="fa-solid fa-chevron-right icon"></i></button>  
+        </div>
+        
+    </section>
+
+</body>
+<script src="index.js"></script>
+</html>
