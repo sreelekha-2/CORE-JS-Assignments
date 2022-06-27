@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce</title>
+  <!-- CSS only -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="brand">SK</a>
+        <div class="nav-links">
+          <a href="#" class="nav-link">Home</a>
+          <a href="#productsContainer" class="nav-link">Products</a>
+          <a href="#" class="nav-link">Cart</a>
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <section class="banner-container">
+    <div class="banner-content">
+      <h2 class="offers-head">We have so much offers for you</h2>
+      <div class="shop-now-btn-container">
+        
+        <a href="#productsContainer" class="shop-btn">Shop Now</a>
+      </div>
+     
+    </div>
+      
+
+  </section>
+
+  <section class="items-container">
+    <div class="select-container">
+      <h3 class="products-head">Products</h3>
+      <div>
+        <label>Select category : </label>
+        <select id="selectCategory" class="select">
+          <option value="all">All</option>
+          <option value="men's clothing">Men Clothing</option>
+          <option value="women's clothing">Women Clothing</option>
+          <option value="jewelery">Jewellery</option>
+          <option value="electronics">Electronics</option>
+        </select>
+      </div>
+      
+    </div>
+    
+    <div id="productsContainer" class="products">
+      
+
+    </div>
+
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
